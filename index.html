@@ -186,7 +186,7 @@
       /* Standard size for landscape and portrait images */
       .image-standard {
         max-width: 100%;
-        max-height: 500px;
+        max-height: 450px; /* Reduced height for consistency */
         border: 2px solid #ddd;
         padding: 10px;
         background-color: #f9f9f9;
@@ -196,22 +196,23 @@
       /* Description styling */
       .media-description {
         text-align: center;
-        padding: 20px;
+        padding: 10px; /* Smaller padding */
         background-color: #f0f0f0;
         border-top: 1px solid #ddd;
         box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
+        margin-top: 30px; /* Space between carousel and description */
+        position: relative;
       }
     
       .description-box {
-        max-width: 800px;
+        max-width: 600px; /* Smaller box */
         margin: 0 auto;
       }
     
       .description {
-        font-size: 18px;
+        font-size: 14px; /* Smaller font size */
         color: #333;
-        line-height: 1.6;
+        line-height: 1.4;
         display: none;
         transition: opacity 0.5s ease-in-out;
       }
@@ -233,7 +234,11 @@
         }
     
         .description {
-          font-size: 16px;
+          font-size: 12px;
+        }
+    
+        .media-description {
+          padding: 8px;
         }
       }
     </style>
