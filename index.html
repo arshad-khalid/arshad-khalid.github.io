@@ -146,25 +146,25 @@
 
 <section id="writing">
   <h2>Media</h2>
-  <div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+  <div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
     <div class="carousel-inner">
-      <!-- First image -->
+      <!-- First image (landscape) -->
       <div class="carousel-item active">
-        <img src="/images/kimono.jpg" class="d-block w-100" style="object-fit: contain;" alt="First Image">
+        <img src="/images/kimono.jpg" class="d-block mx-auto image-standard" alt="First Image">
         <div class="carousel-caption d-block">
           <p>THIS IS DESCRIPTION OF IMAGE ONE</p>
         </div>
       </div>
-      <!-- Second image -->
+      <!-- Second image (portrait) -->
       <div class="carousel-item">
-        <img src="/images/sa.jpg" class="d-block w-100" style="object-fit: contain;" alt="Second Image">
+        <img src="/images/sa.jpg" class="d-block mx-auto image-standard" alt="Second Image">
         <div class="carousel-caption d-block">
           <p>THIS IS DESCRIPTION OF IMAGE TWO</p>
         </div>
       </div>
       <!-- Add more images as needed -->
     </div>
-    
+
     <!-- Carousel controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#mediaCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -176,6 +176,36 @@
     </button>
   </div>
 </section>
+
+<!-- CSS to handle image size, centering, and border -->
+<style>
+  /* Standard size for landscape and portrait images */
+  .image-standard {
+    max-width: 100%;
+    max-height: 500px; /* Limit height for both orientations */
+    border: 2px solid #ddd; /* Simple minimalist border */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background behind the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  }
+
+  /* Ensure portrait images don't stretch horizontally */
+  .carousel-item img {
+    object-fit: contain; /* Maintain aspect ratio and center */
+  }
+
+  /* Center the image horizontally */
+  .carousel-item {
+    text-align: center;
+  }
+
+  /* Adjust the description below the image */
+  .carousel-caption {
+    margin-top: 10px; /* Space between the image and the description */
+    color: #333; /* Text color */
+    font-size: 16px; /* Adjust font size */
+  }
+</style>
 
 
 
