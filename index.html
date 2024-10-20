@@ -1,131 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang=en>
 <head>
+    <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Arshad Khalid">
-    <meta property="og:url" content="http://example.com/index.html">
-    <meta property="og:site_name" content="Arshad Khalid">
-    <meta property="og:locale" content="en_US">
-    <meta property="article:author" content="Arshad Khalid">
-    <meta name="twitter:card" content="summary">
 
-    <title>Arshad Khalid</title>
+    
+<meta property="og:title" content="Arshad Khalid">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Arshad Khalid">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Arshad Khalid">
+<meta name="twitter:card" content="summary">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Inline CSS for image styling -->
 
-    <!-- Favicon & Icons -->
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="130x130" href="/images/apple-touch-icon.png">
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Font Awesome for Icons -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'" />
-
-    <meta name="generator" content="Hexo 7.3.0">
-</head>
-
-<body class="container-fluid py-5">
-    <header class="d-flex justify-content-between align-items-center mb-5">
-        <a href="/" class="text-decoration-none d-flex align-items-center">
-            <img src="/images/logo.png" alt="Logo" class="me-3" style="max-width: 80px;">
-            <h1 class="m-0">Arshad Khalid</h1>
-        </a>
-        <nav>
-            <ul class="list-inline m-0">
-                <li class="list-inline-item"><a href="/" class="text-muted">Home</a></li>
-                <li class="list-inline-item"><a href="/resume" class="text-muted">Resume</a></li>
-                <li class="list-inline-item"><a href="http://github.com/arshad-khalid" target="_blank" class="text-muted">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about" class="text-center mb-5">
-        <h2 class="mb-4">Hello World</h2>
-        <p class="lead">Hey there! I’m Arshad Khalid, a 2023 Computer Science graduate from Asia Pacific University in Kuala Lumpur, Malaysia, and I wrapped up my MBA in August 2024. My big thing? Using tech to make a positive impact.</p>
-        <p class="lead">Beyond the world of IT, I’ve got a thing for exploring new places, capturing moments with my camera, and dabbling in some casual coding. Lately, I’ve been diving into open-source projects—because why not mix learning with giving back?</p>
-        <p class="lead mt-4">
-            Connect with me:
-            <a href="https://github.com/arshad-khalid" target="_blank" class="text-dark ms-2 me-2" aria-label="github">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/arshad-khalid" target="_blank" class="text-dark ms-2 me-2" aria-label="linkedin">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="mailto:arshadkhalid.15@gmail.com" class="text-dark ms-2 me-2" aria-label="mail">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="https://instagram.com/arrshhaad" target="_blank" class="text-dark ms-2" aria-label="instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </p>
-    </section>
-
-    <section id="media" class="text-center mb-5">
-        <h2 class="mb-4">Life in Frames 🖼️</h2>
-        <p class="lead mb-5">Here’s a little glimpse into my world—travel moments, random hobbies, snapshots with friends, and everything in between. Every picture has a story, and these are just a few of my favorite chapters.</p>
-
-        <!-- Carousel -->
-        <div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/images/kimono.jpg" class="d-block mx-auto img-fluid" alt="Kimono Story">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/sa.jpg" class="d-block mx-auto img-fluid" alt="Landscape Shot">
-                </div>
-            </div>
-
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#mediaCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#mediaCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <!-- Descriptions -->
-        <div class="media-description mt-4">
-            <p class="lead active" id="descOne">This is a visual story about a kimono, telling the elegance and cultural heritage of Japan.</p>
-            <p class="lead" id="descTwo">A serene shot of an open landscape, capturing the simplicity of nature and the peace it brings.</p>
-        </div>
-    </section>
-
-    <footer class="d-flex justify-content-between align-items-center py-3 border-top">
-        <p class="m-0">© 2024 Arshad Khalid</p>
-        <nav>
-            <ul class="list-inline m-0">
-                <li class="list-inline-item"><a href="/" class="text-muted">Home</a></li>
-                <li class="list-inline-item"><a href="/resume" class="text-muted">Resume</a></li>
-                <li class="list-inline-item"><a href="http://github.com/arshad-khalid" target="_blank" class="text-muted">Projects</a></li>
-            </ul>
-        </nav>
-    </footer>
-
-    <!-- Bootstrap JS Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS for Carousel Description Sync -->
-    <script>
-        const carousel = document.getElementById('mediaCarousel');
-        const descriptions = document.querySelectorAll('.media-description p');
+    
+      
         
-        carousel.addEventListener('slide.bs.carousel', function (event) {
-            descriptions.forEach(desc => desc.classList.remove('active'));
-            descriptions[event.to].classList.add('active');
-        });
-    </script>
-</body>
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="130x130" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Arshad Khalid</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
 
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+    <div class="content index py4 h-card">
+        
+          <header id="header">
+  <a class="u-url u-uid" href="/">
+  
+    
+      <img id="logo" alt class="u-logo" src="/images/logo.png" />
+    
+  
+    <div id="title">
+      <h1 class="p-name">Arshad Khalid</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-2x"></i></a>
+      </li>
+      <!--
+     --><li><a href="/">Home</a></li><!--
+   --><!--
+     --><li><a href="/resume">Resume</a></li><!--
+   
+   --><!--
+     --><li><a target="_blank" rel="noopener" href="http://github.com/arshad-khalid">Projects</a></li><!--
+   -->
+    </ul>
+  </div>
+</header>
+
+        
+        <ssection id="about" class="p-note">
+          <h2>Hello World</h2> <!-- Heading -->
+          <p>Hey there! I’m Arshad Khalid, a 2023 Computer Science graduate from Asia Pacific University in Kuala Lumpur, Malaysia, and I wrapped up my MBA in August 2024. 
+            My big thing? Using tech to make a positive impact.</p> 
+          <p>Beyond the world of IT, 
+            I’ve got a thing for exploring new places, capturing moments with my camera, and dabbling in some casual coding. 
+            Lately, I’ve been diving into open-source projects—because why not mix learning with giving back?</p>   
+    <p>
+      Find me on
+          <a class="icon u-url" target="_blank" rel="noopener me" href="https://github.com/arshad-khalid" aria-label="github" title="github">
+            <i class="fa-brands fa-github"></i><!--
+      ---></a><!--
+    ---><!--
+    --->,
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="https://linkedin.com/arshad-khalid" aria-label="linkedin" title="linkedin">
+            <i class="fa-brands fa-linkedin"></i><!--
+      ---></a><!--
+    ---><!--
+    --->, 
+        
+          <a class="icon u-email" target="_blank" rel="noopener" href="mailto:arshadkhalid.15@gmail.com" aria-label="mail" title="mail">
+            <i class="fa-solid fa-envelope"></i><!--
+      ---></a>
+        <!--
+    ---> and  
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="https://instagram.com/arrshhaad" aria-label="instagram" title="instagram">
+            <i class="fa-brands fa-instagram"></i><!--
+      ---></a><!--
+    ---><!--
+    --->.
+    </p>
+  
+    <section id="writing">
+      <h2>Life in Frames 🖼️</h2>
+      <p>Here’s a little glimpse into my world—travel moments, random hobbies, snapshots with friends, 
+        and everything in between. Every picture has a story, and these are just a few of my favorite chapters.
+<p>
+      <div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+          <!-- First image (landscape) -->
+          <div class="carousel-item active">
+            <img src="/images/kimono.jpg" class="d-block mx-auto image-standard" alt="First Image">
+          </div>
+          <!-- Second image (portrait) -->
+          <div class="carousel-item">
+            <img src="/images/sa.jpg" class="d-block mx-auto image-standard" alt="Second Image">
+          </div>
+          <!-- Add more images as needed -->
+        </div>
+    
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#mediaCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mediaCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+      <!-- Description section -->
+      <div id="mediaDescription" class="media-description">
+        <div class="description-box">
+          <p id="descOne" class="description active">This is a visual story about a kimono, telling the elegance and cultural heritage of Japan.</p>
+          <p id="descTwo" class="description">A serene shot of an open landscape, capturing the simplicity of nature and the peace it brings.</p>
+          <!-- Add more descriptions as needed -->
+        </div>
+      </div>
+    
+      <!-- Empty space for scrolling -->
+      <div style="height: 100px;"></div>
+    </section>
+    
+    <!-- CSS for styling -->
+    <style>
+      /* Standard size for landscape and portrait images */
+      .image-standard {
+        max-width: 100%;
+        max-height: 450px; /* Reduced height for consistency */
+        border: 0.3px solid #d5d3d3;
+        padding: 2px;
+        background-color: #d5d3d3;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    
+      /* Description styling */
+      .media-description {
+        text-align: center;
+        padding: 5px; /* Smaller padding */
+        background-color: #f0f0f0;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 40px; /* Space between carousel and description */
+        position: relative;
+      }
+    
+      .description-box {
+        max-width: 500px; /* Smaller box */
+        margin: 0 auto;
+      }
+    
+      .description {
+        font-size: 12px; /* Smaller font size */
+        color: #333;
+        line-height: 1.2;
+        display: none;
+        transition: opacity 0.6s ease-in-out;
+      }
+    
+      .description.active {
+        display: block;
+        opacity: 1;
+      }
+    
+      /* Add space below for scrolling */
+      #writing {
+        padding-bottom: 100px;
+      }
+    
+      /* Media query for responsiveness */
+      @media (max-width: 768px) {
+        .image-standard {
+          max-height: 300px;
+        }
+    
+        .description {
+          font-size: 12px;
+        }
+    
+        .media-description {
+          padding: 6px;
+        }
+      }
+    </style>
+    
+    <!-- JavaScript to sync descriptions with images -->
+    <script>
+      const carousel = document.getElementById('mediaCarousel');
+      const descriptions = document.querySelectorAll('.description');
+      
+      carousel.addEventListener('slide.bs.carousel', function(event) {
+        // Remove active class from all descriptions
+        descriptions.forEach(desc => desc.classList.remove('active'));
+    
+        // Add active class to the corresponding description
+        const nextIndex = event.to;
+        descriptions[nextIndex].classList.add('active');
+      });
+    </script>
+
+
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright&copy 2024
+    
+    
+    Arshad Khalid
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/resume">Resume</a></li><!--
+
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/arshad-khalid">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
 </html>
