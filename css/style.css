@@ -1668,3 +1668,57 @@ code {
 #header-post #actions {
   direction: ltr !important;
 }
+/* Default light mode */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Dark mode styles */
+body.dark-theme {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Styling for the toggle button */
+.theme-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.sun-icon {
+  display: none;
+  color: yellow;
+  font-size: 1.5rem;
+}
+
+.moon-icon {
+  color: white;
+  font-size: 1.5rem;
+}
+
+body.dark-theme .moon-icon {
+  display: none;
+}
+
+body.dark-theme .sun-icon {
+  display: inline;
+}
+
+/* Optionally, adjust header, nav, and other elements for dark mode */
+body.dark-theme header, body.dark-theme footer {
+  background-color: #333;
+}
+
+/* Example of darkening the carousel background in dark mode */
+body.dark-theme .carousel-item img {
+  filter: brightness(70%);
+}
+
+/* Ensure the descriptions in dark mode are still legible */
+body.dark-theme .media-description {
+  background-color: #333;
+  color: white;
+}
