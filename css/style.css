@@ -1670,14 +1670,14 @@ code {
 }
 /* Default light mode */
 body {
-  background-color: white;
-  color: black;
+  background-color: #e4e4e7;
+  color: #e4e4e7;
 }
 
 /* Dark mode styles */
 body.dark-theme {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: #333333;
+  color: #333333;
 }
 
 /* Styling for the toggle button */
@@ -1709,7 +1709,7 @@ body.dark-theme .sun-icon {
 
 /* Optionally, adjust header, nav, and other elements for dark mode */
 body.dark-theme header, body.dark-theme footer {
-  background-color: #333;
+  background-color: #333333;
 }
 
 /* Example of darkening the carousel background in dark mode */
@@ -1719,6 +1719,6 @@ body.dark-theme .carousel-item img {
 
 /* Ensure the descriptions in dark mode are still legible */
 body.dark-theme .media-description {
-  background-color: #333;
+  background-color: #333333;
   color: white;
 }
