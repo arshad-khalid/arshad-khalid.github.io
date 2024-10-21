@@ -44,31 +44,27 @@
     
     <div class="content index py4 h-card">
         
-          <header id="header">
-  <a class="u-url u-uid" href="/">
-
-      <img id="logo" alt class="u-logo" src="/images/logo.png" style="width: 80px; height: auto;" />
-    
-    <div id="title">
-      <Arshad class="p-name" style="font-size: 2.6rem;">Arshad Khalid</Arshad>
-    </div>
-  </a>
-  <div id="nav">
-    <ul style="font-size: 1.1rem;"> <!-- Increased size for Home, Resume, and Projects -->
-        <li class="icon">
-            <a href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-2x"></i></a>
-        </li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/resume">Resume</a></li>
-        <li><a target="_blank" rel="noopener" href="http://github.com/arshad-khalid">Projects&#8599;</a></li> <!-- Added arrow symbol for new link -->
-    </ul>
-</div>
-<!-- Add Light/Dark Mode Toggle Button here -->
-<div id="theme-toggle" class="theme-toggle">
-  <i class="fa-solid fa-sun sun-icon"></i>
-  <i class="fa-solid fa-moon moon-icon"></i>
-</div>
-</header>
+      <header id="header" style="display: flex; align-items: center; justify-content: space-between;">
+        <a class="u-url u-uid" href="/" style="display: flex; align-items: center;">
+            <img id="logo" alt class="u-logo" src="/images/logo.png" style="width: 80px; height: auto;" />
+            <div id="title" style="display: flex; align-items: center; gap: 10px;">
+              <Arshad class="p-name" style="font-size: 2.6rem;">Arshad Khalid</Arshad>
+              <!-- Light/Dark Mode Toggle Button here -->
+              <div id="theme-toggle" class="theme-toggle" style="cursor: pointer; display: flex; align-items: center;">
+                <i class="fa-regular fa-sun sun-icon" style="font-size: 1.5rem;"></i>
+                <i class="fa-regular fa-moon moon-icon" style="font-size: 1.5rem; display: none;"></i>
+              </div>
+            </div>
+        </a>
+        <div id="nav">
+          <ul style="font-size: 1.1rem;">
+            <li class="icon"><a href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-2x"></i></a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a target="_blank" rel="noopener" href="http://github.com/arshad-khalid">Projects&#8599;</a></li>
+          </ul>
+        </div>
+      </header>
         
         <section id="about" class="p-note">
           <h2 style="font-size: 2.35rem;">&#x3c;Hello, World!&#x2215;&#x3e;</h2>  <!-- Heading -->
@@ -292,10 +288,11 @@
     const nextIndex = event.to;
     descriptions[nextIndex].classList.add('active');
   });
-
-  // Select elements js
+// Select elements
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
+const sunIcon = document.querySelector('.sun-icon');
+const moonIcon = document.querySelector('.moon-icon');
 
 // Check if the user has a saved theme preference
 const savedTheme = localStorage.getItem('theme');
@@ -303,20 +300,35 @@ const savedTheme = localStorage.getItem('theme');
 // Apply the saved theme on page load
 if (savedTheme) {
   body.classList.add(savedTheme);
+  toggleIcons();
 }
 
 // Toggle light/dark mode on click
 themeToggle.addEventListener('click', () => {
   // Toggle dark theme class on the body
   body.classList.toggle('dark-theme');
-  
+
   // Save the current theme to localStorage
   if (body.classList.contains('dark-theme')) {
     localStorage.setItem('theme', 'dark-theme');
   } else {
     localStorage.removeItem('theme');
   }
+
+  // Toggle between sun and moon icons
+  toggleIcons();
 });
+
+function toggleIcons() {
+  // Show the correct icon depending on the theme
+  if (body.classList.contains('dark-theme')) {
+    sunIcon.style.display = 'inline';
+    moonIcon.style.display = 'none';
+  } else {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'inline';
+  }
+}
 </script>
 <br>
 <br>

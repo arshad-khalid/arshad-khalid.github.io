@@ -1669,56 +1669,85 @@ code {
   direction: ltr !important;
 }
 /* Default light mode */
+:root {
+  --background-color: white;
+  --font-color: #333;
+  --link-color: #007bff;
+  --header-footer-bg: #f8f8f8;
+  --description-bg: #f8f8f8;
+  --toggle-icon-color: #333;
+}
+
 body {
-  background-color: #e4e4e7;
-  color: #e4e4e7;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--link-color);
 }
 
 /* Dark mode styles */
 body.dark-theme {
-  background-color: #333333;
-  color: #333333;
+  --background-color: #1e1e1e;
+  --font-color: #e0e0e0;
+  --link-color: #8ab4f8;
+  --header-footer-bg: #333;
+  --description-bg: #444;
+  --toggle-icon-color: #e0e0e0;
+  
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
-/* Styling for the toggle button */
-.theme-toggle {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  cursor: pointer;
+body.dark-theme a {
+  color: var(--link-color);
 }
 
-.sun-icon {
-  display: none;
-  color: yellow;
-  font-size: 1.5rem;
+/* Header and footer background */
+header, footer {
+  background-color: var(--header-footer-bg);
 }
 
-.moon-icon {
-  color: white;
-  font-size: 1.5rem;
+body.dark-theme header, body.dark-theme footer {
+  background-color: var(--header-footer-bg);
+}
+
+/* Media description section */
+.media-description {
+  background-color: var(--description-bg);
+  color: var(--font-color);
+}
+
+body.dark-theme .media-description {
+  background-color: var(--description-bg);
+}
+
+/* Style for the sun and moon icons */
+.theme-toggle i {
+  color: var(--toggle-icon-color);
+  transition: color 0.3s ease;
+}
+
+/* Toggle icons: only outline versions (no fill) */
+.fa-regular.fa-sun, .fa-regular.fa-moon {
+  stroke-width: 1px;
+}
+
+/* Ensure only one icon is visible at a time */
+body.dark-theme .sun-icon {
+  display: inline;
 }
 
 body.dark-theme .moon-icon {
   display: none;
 }
 
-body.dark-theme .sun-icon {
+/* Light mode: show the moon, hide the sun */
+.moon-icon {
   display: inline;
 }
-
-/* Optionally, adjust header, nav, and other elements for dark mode */
-body.dark-theme header, body.dark-theme footer {
-  background-color: #333333;
-}
-
-/* Example of darkening the carousel background in dark mode */
-body.dark-theme .carousel-item img {
-  filter: brightness(70%);
-}
-
-/* Ensure the descriptions in dark mode are still legible */
-body.dark-theme .media-description {
-  background-color: #333333;
-  color: white;
+.sun-icon {
+  display: none;
 }
